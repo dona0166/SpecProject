@@ -22,7 +22,7 @@ export default {
     return{
       options: {
             title: {
-              text: 'Chemical Concentration',
+              text: 'Concentration Overview',
               x: -20 //center
             },
             credits: {
