@@ -106,8 +106,8 @@ export default {
   },
   watch: {
     selected: function(value){
-        this.isActive = !this.isActive
-        if(this.isActive){
+       this.isActive = !this.isActive
+         if(this.isActive){
             this.descriptionTag = "DESCRIPTION"
             this.diagramTag = "DIAGRAM &#9666;"
         }
