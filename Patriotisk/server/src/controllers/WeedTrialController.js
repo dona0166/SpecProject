@@ -1,4 +1,4 @@
-const {BlockWeed, Weed, WeedChemical, Chemical, TrialResult} = require('../models')
+const {BlockWeed, Weed, Chemical, Trial, Result} = require('../models')
 var _ = require('lodash')
 const sequelize = require('sequelize')
 
@@ -8,26 +8,40 @@ module.exports = {
             /* const blockId = req.params.blockId */
             const blockId = 1
             const chemicalId = 1
+            /* const blockweeds = await Trial.findAll({
+                
+                include: [
+                    {
+                        model: Result
+                    }
+                ]
+            }) */
             const blockweeds = await BlockWeed.findAll({
                 where: { BlockId: blockId },
                 include: [
                     {
                         /* all: true,
-                        nested: true, */
+                        nested: true */
                         model: Weed,
 
                         
                         include: [
                             {
-                                /* model: Chemical,
+                                model: Trial,
                                
                                 include: [
-                                    { */
-                                        model: TrialResult,
-                                        where: {criteria: "Weed"}
+                                    {
+                                        model: Chemical,
+                                        where: { id: chemicalId }
+                                        
                                         /* attributes: ["ChemicalId", [ sequelize.fn('AVG', sequelize.col('concentration')), "avg" ]] */
-                                    /* }
-                                ]  */
+                                    },
+                                    {
+
+                                        model: Result,
+                                        
+                                    }
+                                ] 
                             }
                         ] 
                     }

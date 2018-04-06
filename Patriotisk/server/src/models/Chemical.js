@@ -7,9 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     Chemical.associate = function(models){
-        Chemical.hasMany(models.TrialResult, {foreignKey: 'ChemicalId', sourceKey: 'id'})
-        Chemical.belongsToMany(models.Weed, {through: models.WeedChemical})
-
+        /* Chemical.belongsToMany(models.Weed, {through: models.Trial}) */
+        Chemical.hasMany(models.Trial, {foreignKey: 'ChemicalId', sourceKey: 'id'})
     }
 
     return Chemical

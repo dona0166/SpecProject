@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
 
     Weed.associate = function(models){
         /* Weed.belongsToMany(models.Block, {through: models.BlockWeed}) */
-        Weed.belongsToMany(models.Chemical, {through: models.WeedChemical})
-        Weed.hasMany(models.TrialResult, {foreignKey: 'WeedId', sourceKey: 'id'})
+        /* Weed.belongsToMany(models.Chemical, {through: models.Trial}) */
+        Weed.hasMany(models.Trial, {foreignKey: 'WeedId', sourceKey: 'id'})
     }
 
     return Weed

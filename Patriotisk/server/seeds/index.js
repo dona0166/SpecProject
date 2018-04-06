@@ -5,8 +5,8 @@ const {
     Weed,
     BlockWeed,
     Chemical,
-    WeedChemical,
-    TrialResult
+    Trial,
+    Result
 } = require('../src/models')
 
 const Promise = require('bluebird')
@@ -15,8 +15,8 @@ const blocks = require('./blocks.json')
 const weeds = require('./weeds.json')
 const blockweeds = require('./blockweeds.json')
 const chemicals = require('./chemicals.json')
-const weedchemicals = require('./weedchemicals.json')
-const trialresults = require('./trialresults.json')
+const trials = require('./trials.json')
+const results = require('./results.json')
 
 sequelize.sync({force: true})
     .then(async function () {
@@ -52,14 +52,14 @@ sequelize.sync({force: true})
         )
 
         await Promise.all(
-            weedchemicals.map(weedchemical => {
-                WeedChemical.create(weedchemical)
+            trials.map(trial => {
+                Trial.create(trial)
             })
         )
 
         await Promise.all(
-            trialresults.map(trialresult => {
-                TrialResult.create(trialresult)
+            results.map(result => {
+                Result.create(result)
             })
         )
 

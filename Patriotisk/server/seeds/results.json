@@ -1,0 +1,85 @@
+[
+    {
+        "TrialId": 1,
+        "month": 1,
+        "concentration": 4
+    },
+    {
+        "TrialId": 1,
+        "month": 2,
+        "concentration": 10
+    },
+    {
+        "TrialId": 1,
+        "month": 3,
+        "concentration": 8
+    },
+    {
+        "TrialId": 1,
+        "month": 4,
+        "concentration": 4
+    },
+    {
+        "TrialId": 2,
+        "month": 1,
+        "concentration": 44
+    },
+    {
+        "TrialId": 2,
+        "month": 2,
+        "concentration": 47
+    },
+    {
+        "TrialId": 2,
+        "month": 3,
+        "concentration": 37
+    },
+    {
+        "TrialId": 2,
+        "month": 4,
+        "concentration": 35
+    },
+    {
+        "TrialId": 3,
+        "month": 1,
+        "concentration": 20
+    },
+    {
+        "TrialId": 3,
+        "month": 2,
+        "concentration": 25
+    },
+    {
+        "TrialId": 3,
+        "month": 3,
+        "concentration": 26
+    },
+    {
+        "TrialId": 3,
+        "month": 4,
+        "concentration": 30
+    },
+    {
+        "TrialId": 4,
+        "month": 1,
+        "concentration": 55
+    },
+    {
+        "TrialId": 4,
+        "month": 2,
+        "concentration": 70
+    },
+    {
+        "TrialId": 4,
+        "month": 3,
+        "concentration": 72
+    },
+    {
+        "TrialId": 4,
+        "month": 4,
+        "concentration": 80
+    }
+
+
+
+]
