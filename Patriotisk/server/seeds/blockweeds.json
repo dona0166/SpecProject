@@ -1,0 +1,14 @@
+[
+    {
+        "BlockId": 1,
+        "WeedId": 1
+    },
+    {
+        "BlockId": 1,
+        "WeedId": 2
+    },
+    {
+        "BlockId": 2,
+        "WeedId": 1
+    }
+]

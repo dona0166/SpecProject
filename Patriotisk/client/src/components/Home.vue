@@ -6,11 +6,6 @@
       
     
   </div>
-  <!-- <v-layout class="home">
-    <v-flex xs12>
-      home
-    </v-flex>
-  </v-layout> -->
 </template>
 
 <script>
@@ -22,7 +17,7 @@ export default {
     return{
       options: {
             title: {
-              text: 'Chemical Concentration',
+              text: 'Concentration Overview',
               x: -20 //center
             },
             credits: {

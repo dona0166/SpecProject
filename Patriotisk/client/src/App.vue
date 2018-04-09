@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    
-    <div>
-      <menu-view title="Menu" :items="blocks" class="header">
-      </menu-view>
-      <router-view class="content"/>
-    </div>
+    <title-bar class="title-bar" :title="title" :items="options"></title-bar>
+   <router-view/>
   </div>
 </template>
 
 <script>
 import MenuView from '@/components/globals/MenuView'
+import TitleBar from '@/components/globals/TitleBar'
 export default {
   name: 'App',
   components: {
-    MenuView
+    MenuView,
+    TitleBar
   },
   data() {
     return {
@@ -22,15 +20,15 @@ export default {
         {'title': 'Blocks', 'list': ['A', 'B', 'C', 'D', 'E', 'F']},
         {'title': 'Doses', 'list': ['22ml', '10ml', '100ml', '1ml']},
         {'title': 'Chemical', 'list': ['DFF', 'Stomp', 'Boxer', 'Hussar', 'Agil']}
-      ]
+      ],
+      options: [
+          {'name': 'Effectivness by Chemical', 'link': 'bychemical'},
+                    {'name': 'Register', 'link': 'register'}
 
+      ],
+      title: {'name': 'Patrioskundskyld App', 'link': '/'}
     }
-  },
-  /* async mounted(){
-    this.blocks = [
-      'A', 'B', 'C', 'D'
-    ]
-  } */
+  }
 }
 </script>
 
@@ -45,18 +43,13 @@ export default {
   padding: 0;
   min-width: 640px;
 }
-.content{
-  height: 100vh;
-  width: 80%;
-  border: 1px solid blue;
-}
-.header{
-  float: left;
-  height: 100vh;
-  width: 20%;
-  border: 1px solid blue;
-  z-index: 2;
-  margin: auto;
+
+
+::-webkit-scrollbar {width: 10px; height: 4px; background: rgb(255, 208, 0); }
+::-webkit-scrollbar-thumb { background-color: black;}
+
+.title-bar{
   background-color: grey;
 }
+
 </style>

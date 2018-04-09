@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "WeedId": 1,
+        "ChemicalId": 1
+    },
+    {
+        "id": 2,
+        "WeedId": 2,
+        "ChemicalId": 1
+    },
+    {
+        "id": 3,
+        "WeedId": 1,
+        "ChemicalId": 2
+    },
+    {
+        "id": 4,
+        "WeedId": 2,
+        "ChemicalId": 2
+    }
+]
