@@ -17,8 +17,7 @@
           </div>       
         </div> 
       </li>
-  </div>
- <div class="List">
+      <div class="List">
    <ul>
       <li 
         v-for="(item, index) in items"
@@ -32,6 +31,8 @@
     
   </div>
 </div>
+  </div>
+ 
 </template>
 
 <script>
@@ -53,13 +54,13 @@ export default {
 
 .Menu {
   width: 100%;
-  background: linear-gradient(#01778d, #00414d);
+  background: linear-gradient(#01414D,#016173,#01829A,#01778d);
+
 }
 .List {
   width: 100%;
-  background: #00414d;
   text-transform: uppercase;
-  border-bottom: 4px #01778d solid;
+  border-bottom: 4px #016173 solid;
 }
 
 
@@ -68,7 +69,7 @@ export default {
 }
 
 .List ul {
-    border-top: 2px #01778d solid;
+    border-top: 2px #016173 solid;
 
   
 }
@@ -79,7 +80,7 @@ export default {
   -o-transition: background-color 2s ease-out;
   transition: background-color 2s ease-out;
   padding: 12px;
-  border-left: 2px #01778d solid;
+  border-left: 2px #016173 solid;
 
 }
 .List a {
@@ -94,7 +95,7 @@ export default {
 
 .List a:hover {
     font-size: 1.30em;
-  border-bottom: 3px solid #01778d;
+  border-bottom: 3px solid #016173;
 }
 
 .title {

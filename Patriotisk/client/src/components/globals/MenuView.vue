@@ -61,5 +61,6 @@ button:hover {
 
 h1 {
   color: white;
+  border-bottom: #01778d 2px solid;
 }
 </style>

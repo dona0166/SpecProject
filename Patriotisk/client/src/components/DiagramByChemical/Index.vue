@@ -160,9 +160,16 @@ export default {
   float: left;
   height: 100%;
   min-width: 10em;
+  transition: all ease-in-out 500ms;
+
 /*   position: fixed;
  */  
 }
+.header:hover {
+     box-shadow: 5px 7px 3px #01778d;
+
+}
+
 
 .something{
     color: green;
