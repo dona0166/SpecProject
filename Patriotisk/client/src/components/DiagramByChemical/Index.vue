@@ -154,16 +154,11 @@ export default {
 }
 
 .header{
+  border: 2px #01778d solid;
+  padding: 10px;
+  margin: 25px;
   float: left;
-  height: 100vh;
-  width: 10%;
-  margin: auto;
-  background-color: grey;
-  overflow: scroll;
-  border-radius: 6px;
-  box-shadow: 2px 1px;
-  border: 1px solid white;
-  direction: rtl;
+  height: 100%;
   min-width: 10em;
 /*   position: fixed;
  */  

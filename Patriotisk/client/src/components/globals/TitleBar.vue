@@ -1,18 +1,8 @@
 <template>
-  <div>
-    <div class="title">
-        <router-link :to="title.link || 'default'">{{title.name}}</router-link>
-      </div>
-      <ul>
-        <li 
-        v-for="(item, index) in items"
-        :key="index"
-        class="element">
-          <div class="itemButton">
-            <router-link :to="item.link || 'default'">{{item.name}}</router-link>
-          </div>
-        </li>
-        <li class="login">
+<div>
+  <div class="Menu">
+     <router-link :to="title.link || 'default'" tag="img" :src="images.logo"></router-link>
+     <li class="login">
         <div id="vue-instance">
           <div>
             <transition name="fade" mode="out-in">
@@ -27,92 +17,103 @@
           </div>       
         </div> 
       </li>
-
-
-    </ul>
   </div>
+ <div class="List">
+   <ul>
+      <li 
+        v-for="(item, index) in items"
+        :key="index">
+        <div>
+          <router-link :to="item.link || 'default'">{{item.name}}</router-link>
+          </div>
+        </li>
+   </ul>
+    </div>
+    
+  </div>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Options',
-  props: [
-    'title',
-    'items',
-  ],
-  data () {
+  name: "Options",
+  props: ["title", "items"],
+  data() {
     return {
-                  show: false
-
-    }
+      show: false,
+      images: {
+        logo: require("../../assets/icon.png")
+      }
+    };
   }
-}
+};
 </script>
 <style scoped>
-  .itemButton{
-    border: 1px solid white;
-    background-color: #264D4A;
-    padding: 10px;
-    margin: 10px;
-  }
-   .itemButton:hover{
-    background-color: #458D88;
-  }
 
-  .element{
-    display: inline-block;
-  }
 
-  .login{
-    float: right;
-    
-  }
-
-  ul{
-    list-style-type: none;
-  }
-
-  li a {
-    
-    text-decoration: none;
-    color: white;
-  }
-
-  .title{
-    position: absolute;
-    margin: 1em 1em;
-  }
-
-  .title a{
-    color: rgb(255, 166, 0);
-    text-shadow: 1px 1px black;
-    text-decoration: none;
-  }
-  .topbar {
-  padding: 30px 0 10px 0;
+.Menu {
+  width: 100%;
+  background: linear-gradient(#01778d, #00414d);
 }
-h1, h2 {
+.List {
+  width: 100%;
+  background: #00414d;
+  text-transform: uppercase;
+  border-bottom: 4px #01778d solid;
+}
+
+
+.login {
+  float: right;
+}
+
+.List ul {
+    border-top: 2px #01778d solid;
+
+  
+}
+.List li {
+  display: inline-block;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+  padding: 12px;
+  border-left: 2px #01778d solid;
+
+}
+.List a {
+  font-size: 1.25em;
+  color: white;
+    text-decoration: none;
+
+  border-bottom: 1px solid transparent;
+    transition: all ease-in-out 500ms;
+
+}
+
+.List a:hover {
+    font-size: 1.30em;
+  border-bottom: 3px solid #01778d;
+}
+
+.title {
+  position: absolute;
+  margin: 1em 1em;
+}
+
+h1,
+h2 {
   font-weight: normal;
 }
-ul {
-    list-style-position: inside;
-}
-
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s
+  transition: opacity 1s;
 }
 
 .fade-enter,
-.fade-leave-to
-/* .fade-leave-active in <2.1.8 */
-
-{
-  opacity: 0
+.fade-leave-to {
+  opacity: 0;
 }
-
-  
-
-  
 </style>

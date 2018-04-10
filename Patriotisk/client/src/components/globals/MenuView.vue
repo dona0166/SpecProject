@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="MenuView">
     <div v-for="(item, index) in items"
             :key="index">
-        <h2>{{item.title}}</h2>
+        <h1>{{item.title}}</h1>
         <ul>
             <li 
             v-for="(element, index) in item.list"
@@ -19,48 +19,47 @@
 
 <script>
 export default {
-  name: 'MenuView',
-  props: [
-    'items'
-  ],
-  data () {
-    return {
-      
-    }
+  name: "MenuView",
+  props: ["items"],
+  data() {
+    return {};
   },
   methods: {
-      async sendChoice(element){
-        this.$store.dispatch('setChoice', {'block': element})
-      }
+    async sendChoice(element) {
+      this.$store.dispatch("setChoice", { block: element });
+    }
   }
-}
+};
 </script>
 
-<style></style>
 <style scoped>
-  .itemButton{
-    width: 100%;
-    border: 1px solid white;
-    background-color: rgb(255, 170, 11);
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 2px 1px;
-  }
-
-  .element{
-    width: 50%;
-    margin: 10px auto;
-  }
-
-  ul{
+.MenuView {
+  background: linear-gradient(#00414d, #00414d, #00414d, #01778d);
+}
+ul {
+  border-top: 2px #00414d solid;
     list-style-type: none;
-  }
 
-  h2{
-    margin: 10px auto;
-  }
+}
+
+button {
+  padding: 12px;
+
+  font-size: 2.25em;
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid transparent;
+  transition: all ease-in-out 500ms;
+}
+
+button:hover {
+  font-size: 2.25em;
+  border-bottom: 3px solid #01778d;
+}
 
 
-
-  
+h1 {
+  color: white;
+}
 </style>

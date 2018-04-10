@@ -81,7 +81,7 @@ export default {
 <style>
 .chart{
   margin: 0px auto;
-  padding: 10px;
+  padding-top: 50px;
   width: 100%;
 }
   

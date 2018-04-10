@@ -1,7 +1,7 @@
 <template>
   <div>
     <form  @submit="checkForm" action="localhost:8080" method="post">
-<div class="rm_overlay" id="fundraise">
+<div class="" id="fundraise">
   <div class="rm_overlay--modal">
     <div class="rm_modal--header">
       <h1>Register new user</h1>
@@ -52,7 +52,14 @@ export default {
     return {
       
       errors:[],
-      PlaceHolders: [],
+      PlaceHolders: [{Name: "Full Name"},
+      {Name: "22-22-22-22"},
+      {Name: "Your Email"},
+      {Name: "Company You Are Associated With"},
+      {Name: "Your Password"},
+      {Name: "Your Password"}
+      
+      ],
       options: [ {'Name': 'Your Name', 'Description': 'Full Name', 'model': "name" },
                  {'Name': 'Phone Number', 'Description': '22-22-22-22', 'model': 'phone' },
                  {'Name': 'Email Address', 'Description': 'Your Email', 'model': 'email'},
@@ -127,7 +134,7 @@ export default {
       checktext:function(index) {
         if (this.options[index].Description == "")
         {
-          this.options[index].Description = this.options[index].model;
+          this.options[index].Description = this.PlaceHolders[index].Name;
         }
       },
       async sendRegistrationField(element,index){
@@ -142,7 +149,6 @@ export default {
 
 
 .rm_overlay--modal {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;

@@ -22,7 +22,7 @@ export default {
         {'title': 'Chemical', 'list': ['DFF', 'Stomp', 'Boxer', 'Hussar', 'Agil']}
       ],
       options: [
-          {'name': 'Effectivness by Chemical', 'link': 'bychemical'},
+          {'name': 'Information on the land', 'link': 'bychemical'},
                     {'name': 'Register', 'link': 'register'}
 
       ],
@@ -42,14 +42,8 @@ export default {
   margin: 0;
   padding: 0;
   min-width: 640px;
-}
-
-
-::-webkit-scrollbar {width: 10px; height: 4px; background: rgb(255, 208, 0); }
-::-webkit-scrollbar-thumb { background-color: black;}
-
-.title-bar{
-  background-color: grey;
+  background: #FBFBFB;
+  height: 100vh;
 }
 
 </style>
