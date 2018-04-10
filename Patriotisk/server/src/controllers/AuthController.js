@@ -21,7 +21,7 @@ module.exports = {
         }
         catch(err){
             res.status(401).send({
-                success: false, message : "User already exists"
+                success: false, message : "The user already exists"
             })
         }
     },
@@ -36,7 +36,7 @@ module.exports = {
             console.log(email)
             if(!user){
                 res.status(401).send({
-                    success: false, message: "Username or password incorrect"
+                    success: false, message: "Email or password incorrect"
                 })
             }
             else{
@@ -44,7 +44,7 @@ module.exports = {
                 const passwordIsValid = await user.comparePassword(password)
                 if(!passwordIsValid){
                     res.status(401).send({
-                        success: false, message: "Username or password incorrect"
+                        success: false, message: "Email or password incorrect"
                     })
                 }
                 else{

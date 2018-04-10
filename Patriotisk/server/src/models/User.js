@@ -18,11 +18,37 @@ function hashPassword(user, options){
 
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false/* ,
+            validate: {
+                min: 3,
+                notEmpty: true
+            } */
+        },
+        telephonenr: {
+            type: DataTypes.STRING,
+            allowNull: false/* ,
+            validate: {
+                is: /^((\(?\+45\)?)?)(\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$/i
+                
+            } */
+        },
         email: {
             type: DataTypes.STRING,
-            unique: true
+            unique: true,
+            allowNull: false,
+            /* validate: {
+                is: /\S+@\S+\.\S+/i
+            } */
         },
-        password: DataTypes.STRING
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+            /* validate: {
+                is: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i
+            } */
+        }
     },
        {
            hooks: {
