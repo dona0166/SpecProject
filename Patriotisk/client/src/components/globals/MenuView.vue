@@ -3,7 +3,7 @@
     <div v-for="(item, index) in items"
             :key="index">
         <h1>{{item.title}}</h1>
-        <ul>
+          <transition-group name="list-complete" tag="li">
             <li 
             v-for="(element, index) in item.list"
             :key="index"
@@ -12,7 +12,7 @@
                 {{element}}
               </button>
             </li>
-          </ul>
+          </transition-group>
       </div>
   </div>
 </template>

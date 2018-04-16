@@ -1,0 +1,68 @@
+<template>
+    <div>
+        <div class="Menu">
+            <div :class="{'collapsed': scrolled}">
+                <transition name="fade" mode="out-in">
+                    <div key="a" v-if="!scrolled">
+                        <router-link :to="title.link || 'default'" tag="img" :src="images.logo"></router-link>
+                    </div>
+                </transition>
+            </div>
+            <li class="login">
+                <a href="#" @click="show = !show">Login</a>
+                <div key="3" v-if="show">
+
+                    <div class="rm_overlay" id="fundraise">
+                        <div class="rm_overlay--modal active">
+                            <div class="rm_modal--header">
+                                <h1>Let's Get Started
+                                    <p>1,231 people have already started projects.</p>
+                                </h1>
+                            </div>
+                            <div class="rm_modal--content">
+                                <div class="rm_input-group--col w-50">
+                                    <label>Your Name
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" placeholder="First Name" />
+                                </div>
+                            </div>
+                            <a class="rm_button--next" href="#">Continue</a>
+                            <div class="rm_modal--footer">
+                                <div class="rm_float--right">Already have an account?
+                                    <a class="rm_link" href="#">Sign In.</a>
+                                </div>
+                                <a class="rm_link" href="#">Sign Up as a Group</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div key="1" v-if="!show">
+                </div>
+
+            </li>
+
+        </div>
+        <div class="List">
+            <ul>
+                <li>
+                    <transition name="fade" mode="out-in">
+
+                        <div key="b" class="icon" v-if="scrolled">
+                            <router-link :to="title.link || 'default'" tag="img" :src="images.logo2"></router-link>
+                        </div>
+                    </transition>
+                </li>
+                <li v-for="(item, index) in items" :key="index">
+                    <div>
+                        <router-link :to="item.link || 'default'">{{item.name}}</router-link>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+</template>
